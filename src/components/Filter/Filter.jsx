@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import css from './Filter.module.css';
 const Filter = ({ onChange, value }) => {
   return (
-    <label>
+    <label className={css.findCont}>
       Find contacts by name
       <input
         type="text"
         name="filter"
         onChange={onChange}
-        defaultValue={value}
+        value={value}
+        className={css.findInput}
       />
     </label>
   );
