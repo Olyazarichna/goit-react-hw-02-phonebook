@@ -14,7 +14,7 @@ export class App extends Component {
     filter: '',
   };
   haveContacts = (contacts, data) => {
-    return contacts.some(contact => contact.name === data.name);
+    return contacts.some(contact => contact.name.toLowerCase() === data.name.toLowerCase());
   };
 
   formSubmitHandler = data => {
